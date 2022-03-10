@@ -1,0 +1,41 @@
+[user]
+	name = pashnik
+	email = pashnik98@gmail.com
+
+[core]
+    excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+    editor = code --wait
+
+[alias]
+    l   = log --oneline --graph --decorate
+    st  = status
+    br  = branch
+    c   = checkout
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[commit]
+    template = .gitmessage
+
+[init]
+	defaultBranch = master
