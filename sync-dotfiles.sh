@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rsync --exclude ".git/" \
-		--exclude ".DS_Store" \
-		--exclude "bootstrap.sh" \
+		--exclude "sync-dotfiles.sh" \
 		--exclude "LICENSE" \
+		--exclude "install-zsh-stuff.sh" \
 		-avh --no-perms . ~;
