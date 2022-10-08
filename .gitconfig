@@ -1,19 +1,25 @@
 [user]
-	name = pashnik
-	email = pashnik98@gmail.com
 
-[core]
-    excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-    editor = code --wait
+    name = pashnik
+    email = pashnik98@gmail.com
 
 [alias]
-    l   = log --oneline --graph --decorate
-    st  = status
-    br  = branch
-    c   = checkout
+
+    # View abbreviated SHA, description, and history graph of the latest n commits.
+    logn = "!r() { git log --pretty=oneline -n $1 --graph --abbrev-commit; }; r"
+    # Interactive rebase with the given number of latest commits.
+    rebi = "!r() { git rebase -i HEAD~$1; }; r"
+    # Interactively rebase all the commits on the current branch with autosquash.
+    rebasq = "!git rebase -i `git merge-base master HEAD` --autosquash"
+    # Commit all changes.
+    ca = !git add -A && git commit
+
+[color]
+
+    ui = auto
 
 [color "branch"]
+
     current = yellow reverse
     local = yellow
     remote = green
@@ -25,17 +31,21 @@
     new = green bold
 
 [color "status"]
+
     added = yellow
     changed = green
     untracked = cyan
 
 [url "git@github.com:"]
-	insteadOf = "gh:"
-	pushInsteadOf = "github:"
-	pushInsteadOf = "git://github.com/"
+
+    insteadOf = "gh:"
+    pushInsteadOf = "github:"
+    pushInsteadOf = "git://github.com/"
 
 [commit]
+
     template = .gitmessage
 
 [init]
-	defaultBranch = master
+
+    defaultBranch = master
