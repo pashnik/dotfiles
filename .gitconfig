@@ -44,7 +44,7 @@
 
 [commit]
 
-    template = .gitmessage
+    template = ~/.gitmessage
 
 [init]
 
