@@ -42,10 +42,6 @@
     pushInsteadOf = "github:"
     pushInsteadOf = "git://github.com/"
 
-[commit]
-
-    template = ~/.gitmessage
-
 [init]
 
     defaultBranch = master
