@@ -1,12 +1,13 @@
 cask_args appdir: "/Applications"
 
-cask "java"
 cask "visual-studio-code"
+cask "intellij-idea"
 cask "vlc"
-cask "iterm2"
 cask "postico"
 cask "telegram"
 cask "google-chrome"
+cask "tabby"
+cask "postman"
 
 # System
 brew "curl"
@@ -36,16 +37,10 @@ brew "sslscan"
 brew "watch"
 brew "telnet"
 brew "gnupg"
-
 brew "jq"
 
 # Dev
-brew "ruby"
-brew "yarn"
-brew "python"
-brew "pyenv"
 brew "go"
 brew "cmake"
-brew "openjdk"
 brew "scala"
 brew "sbt"
