@@ -38,6 +38,7 @@ brew "watch"
 brew "telnet"
 brew "gnupg"
 brew "jq"
+brew "knqyf263/pet/pet"
 
 # Dev
 brew "go"
